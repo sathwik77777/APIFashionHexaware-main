@@ -27,8 +27,8 @@ namespace FashionHexa.Services
         {
             try
             {
-                
-                Product product = context.Products.SingleOrDefault(p => p.ProductId == productId); 
+
+                Product product = context.Products.SingleOrDefault(p => p.ProductId == productId);
                 context.Products.Remove(product);
                 context.SaveChanges();
             }
@@ -43,7 +43,7 @@ namespace FashionHexa.Services
         {
             try
             {
-                
+
                 Product product = context.Products.SingleOrDefault(p => p.ProductId == productId);
                 return product;
             }
@@ -102,7 +102,7 @@ namespace FashionHexa.Services
             {
 
                 return context.Products.Where(p => p.Name == productName).ToList();
-                
+
             }
             catch (Exception)
             {
@@ -110,6 +110,22 @@ namespace FashionHexa.Services
                 throw;
             }
         }
+
+        public bool UpdateProductQuantity(int productId, int Quantity) 
+        {
+            var product = GetProductById(productId);
+            if (product != null)
+            {
+                if(Quantity >= 0 && Quantity <= product.quantity)
+                {
+                    product.quantity = Quantity;
+                    return true;
+                }
+            }
+            return false;
+            
+        }
+
 
         /*public List<Product> GetproductBySeller(int userId)
         {

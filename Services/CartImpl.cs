@@ -23,7 +23,8 @@ namespace FashionHexa.Services
                     CartId = c.CartId,
                     UserId = c.UserId,
                     ProductId = c.ProductId,
-                    Quantity = c.Quantity
+                    Quantity = c.Quantity,
+                    //image= c.image
                 })
                 .ToList();
             return result;
@@ -35,6 +36,7 @@ namespace FashionHexa.Services
             cartNew.UserId = item.UserId;
             cartNew.ProductId = item.ProductId;
             cartNew.Quantity= item.Quantity;
+            //cartNew.image = item.image;
             _context.carts.Add(cartNew);
             return true;
         }
@@ -57,6 +59,7 @@ namespace FashionHexa.Services
             cartUpdate.UserId = item.UserId;
             cartUpdate.ProductId = item.ProductId;
             cartUpdate.Quantity = item.Quantity;
+            //cartUpdate.image = item.image;
             return true;
         }
 
@@ -72,7 +75,8 @@ namespace FashionHexa.Services
                 CartId = cart.CartId,
                 UserId = cart.UserId,
                 ProductId = cart.ProductId,
-                Quantity = cart.Quantity
+                Quantity = cart.Quantity,
+                //image= cart.image
             };
             return cartDTO;
         }
@@ -94,6 +98,7 @@ namespace FashionHexa.Services
                     Name=p.Name,
                     Price=p.Price,
                     Quantity=c.Quantity,
+                    //image=p.image,
                 }
             ).ToList();
             return result;

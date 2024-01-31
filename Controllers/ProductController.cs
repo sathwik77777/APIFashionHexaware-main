@@ -199,6 +199,8 @@ namespace FashionHexa.Controllers
             }
         }
 
+        
+
         /*[HttpGet,Route("productBySeller")]
         //[Authorize]
         public IActionResult ProductBySeller(int userId)

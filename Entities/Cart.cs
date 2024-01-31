@@ -19,5 +19,8 @@ namespace FashionHexa.Entities
         public Product Product { get; set; }
         [Required]
         public int Quantity {  get; set; }
+        /*[ForeignKey("image")]
+        public string image {  get; set; }*/
+        
     }
 }
