@@ -111,7 +111,7 @@ namespace FashionHexa.Services
             }
         }
 
-        public bool UpdateProductQuantity(int productId, int Quantity) 
+        /*public bool UpdateProductQuantity(int productId, int Quantity) 
         {
             var product = GetProductById(productId);
             if (product != null)
@@ -124,7 +124,7 @@ namespace FashionHexa.Services
             }
             return false;
             
-        }
+        }*/
 
 
         /*public List<Product> GetproductBySeller(int userId)

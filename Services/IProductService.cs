@@ -11,6 +11,6 @@ namespace FashionHexa.Services
         void UpdateProduct(Product product); //Done
         void DeleteProduct(int productId); //Done
         //List<Product> GetproductBySeller(int userId); //Done
-        bool UpdateProductQuantity(int productId, int Quantity);
+        /*bool UpdateProductQuantity(int productId, int Quantity);*/
     }
 }

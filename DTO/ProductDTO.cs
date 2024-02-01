@@ -13,7 +13,7 @@ namespace FashionHexa.DTO
         
         //public string BrandName { get; set; }
         public string image {  get; set; }
-        public int quantity {  get; set; }
+        //public int quantity {  get; set; }
         
     }
 

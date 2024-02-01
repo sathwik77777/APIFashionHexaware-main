@@ -98,7 +98,7 @@ namespace FashionHexa.Services
                     Name=p.Name,
                     Price=p.Price,
                     Quantity=c.Quantity,
-                    //image=p.image,
+                    image=p.image,
                 }
             ).ToList();
             return result;
