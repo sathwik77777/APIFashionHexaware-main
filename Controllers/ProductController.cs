@@ -199,7 +199,17 @@ namespace FashionHexa.Controllers
             }
         }
 
-        
+        /*public IActionResult UpdateProductQuantity(int productId, int quantity)
+        {
+            try
+            {
+
+            }
+            catch
+            {
+
+            }
+        }*/
 
         /*[HttpGet,Route("productBySeller")]
         //[Authorize]
