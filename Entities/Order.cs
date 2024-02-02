@@ -17,5 +17,6 @@ namespace FashionHexa.Entities
         public Product? Product { get; set; }
         [ForeignKey("UserId")]
         public User? User { get; set; }
+        public int Quantity { get; set; }  
     }
 }

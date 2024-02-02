@@ -5,9 +5,12 @@ namespace FashionHexa.Services
     public class OrderService : IOrderService
     {
         private readonly MyContext context;
+        private readonly ProductService productService;
+
         public OrderService(MyContext Context)
         {
             context = Context;
+           // productService=_productService;
         }
 
         public Order GetOrder(Guid orderId)
@@ -27,8 +30,14 @@ namespace FashionHexa.Services
 
         public void PlaceOrder(Order order)
         {
-            context.Orders.Add(order);
-            context.SaveChanges();
+            Product product = new Product();
+            product = productService.GetProductById(order.ProductId);
+            if (product.Stock > order.Quantity)
+            {
+                context.Orders.Add(order);
+                product.Stock -= order.Quantity;
+                context.SaveChanges();
+            }
         }
     }
 }

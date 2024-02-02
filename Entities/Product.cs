@@ -14,11 +14,13 @@ namespace FashionHexa.Entities
         public double Price { get; set; }
         public Boolean Availabile { get; set; } = true;
 
+        
         public int BrandId {  get; set; }
+        
         //public string? BrandName { get; set; }
 
         public string image{  get; set; }
-        //public int quantity {  get; set; }
+        public int Stock {  get; set; }
         
         
         
@@ -26,6 +28,6 @@ namespace FashionHexa.Entities
         
         [ForeignKey("BrandId")]
         
-        public Brand? BrandName { get; set; }
+        public Brand? Brand { get; set; }
     }
 }
